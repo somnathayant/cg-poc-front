@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Employee List</div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Employee Id</th>
+                        <th>Name</th>
+                        <th>Salary</th>
+                        <th>City</th>
+                        <th>State</th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let emp of emps">
+                        <td>{{ emp.empId }}</td>
+                        <td>{{ emp.name }}</td>
+                        <td>{{ emp.salary }}</td>
+                        <td>{{ emp.city }}</td>
+                        <td>{{ emp.state }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
