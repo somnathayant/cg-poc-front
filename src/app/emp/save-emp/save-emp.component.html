@@ -5,19 +5,31 @@
         <div class="row">
           <div class="col-md-3">
             <label for="name"> Name :</label>
-            <input type="text" id="name" formControlName="name" class="form-control" placeholder="Required">
+            <input type="text" id="name" formControlName="name" class="form-control" placeholder="Required" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+            <div *ngIf="submitted  && f.name.errors" class="invalid-feedback">
+              <div *ngIf="f.name.errors.required">Name is required</div>
+          </div>
           </div>
           <div class="col-md-3">
             <label for="salary">Salary :</label>
-            <input type="text" id="salary" formControlName="salary" class="form-control" placeholder="Required">
+            <input type="text" id="salary" formControlName="salary" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.salary.errors }" placeholder="Required">
+            <div *ngIf="submitted  && f.salary.errors" class="invalid-feedback">
+              <div *ngIf="f.salary.errors.required">Salary is required</div>
+          </div>
           </div>
           <div class="col-md-3">
             <label for="lastname">City :</label>
-            <input type="text"  formControlName="city" class="form-control" placeholder="Required">
+            <input type="text"  formControlName="city" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.city.errors }" placeholder="Required">
+            <div *ngIf="submitted  && f.city.errors" class="invalid-feedback">
+              <div *ngIf="f.city.errors.required">City is required</div>
+          </div>
           </div>
           <div class="col-md-3">
             <label for="lastname">state :</label>
-            <input type="text" id="state" formControlName="state" class="form-control" placeholder="Required">
+            <input type="text" id="state" formControlName="state" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.state.errors }" placeholder="Required">
+            <div *ngIf="submitted  && f.state.errors" class="invalid-feedback">
+              <div *ngIf="f.state.errors.required">State is required</div>
+          </div>
           </div>
         </div>
         <br>
