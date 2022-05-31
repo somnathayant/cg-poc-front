@@ -5,8 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CheckComponent } from './check/check.component';
 import {HttpClientModule} from '@angular/common/http';
-import { ReactiveFormsModule }      from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import {EmpService} from '../app/service/employeeService.component';
+import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {EmpService} from '../app/service/employeeService.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DataTablesModule
   ],
   providers: [EmpService],
   bootstrap: [AppComponent]

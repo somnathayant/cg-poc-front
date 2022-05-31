@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cg-poc-front": {
+    "summit": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/cg-poc-front",
+            "outputPath": "dist/summit",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,13 +24,16 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/datatables.net-dt/css/jquery.dataTables.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.slim.min.js",
-              "node_modules/popper.js/dist/popper.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"]
+              "node_modules/jquery/dist/jquery.js",
+  "node_modules/datatables.net/js/jquery.dataTables.js",
+  "node_modules/bootstrap/dist/js/bootstrap.min.js"
+
+            ]
           },
           "configurations": {
             "production": {
@@ -66,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cg-poc-front:build"
+            "browserTarget": "summit:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "cg-poc-front:build:production"
+              "browserTarget": "summit:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cg-poc-front:build"
+            "browserTarget": "summit:build"
           }
         },
         "test": {
@@ -114,18 +117,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "cg-poc-front:serve"
+            "devServerTarget": "summit:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "cg-poc-front:serve:production"
+              "devServerTarget": "summit:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "cg-poc-front",
+  "defaultProject": "summit",
   "cli": {
     "analytics": false
   }

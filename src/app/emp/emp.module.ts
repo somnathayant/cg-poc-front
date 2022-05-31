@@ -6,6 +6,7 @@ import { SaveEmpComponent } from './save-emp/save-emp.component';
 import { ListEmpComponent } from './list-emp/list-emp.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { DataTablesModule } from 'angular-datatables';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import {HttpClientModule} from '@angular/common/http';
     EmpRoutingModule,
     FormsModule,
         ReactiveFormsModule,
-        HttpClientModule
+        HttpClientModule,
+        DataTablesModule
   ]
 })
 export class EmpModule { }
