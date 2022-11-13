@@ -9,12 +9,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {EmpService} from '../app/service/employeeService.component';
 import { DataTablesModule } from 'angular-datatables';
 import { Br1Component } from './br1/br1.component';
+import { Br3Component } from './br3/br3.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CheckComponent,
-    Br1Component
+    Br1Component,
+    Br3Component
   ],
   imports: [
     BrowserModule,
